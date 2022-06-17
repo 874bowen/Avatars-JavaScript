@@ -1,3 +1,25 @@
+function generate(){
+    var name= document.getElementById("name").value;
+    var bcgColor= document.getElementById("bcg-color").value;
+    var textColor= document.getElementById("text-color").value;
+    console.log("Background color: "+ bcgColor);
+    console.log(name);
+    const myNames = name.split(" ");
+    console.log(myNames);
+    const initials = myNames.shift().charAt(0) + myNames.pop().charAt(0);
+    const nameInitials =initials.toUpperCase();
+    console.log(nameInitials);
+    var avatarDiv = document.getElementById("avatarDiv");
+    if (avatarDiv.style.display === "none"){
+        avatarDiv.style.display = "block";
+    }
+    document.getElementById("avatar").src = generateAvatar(
+        nameInitials,
+        textColor,
+        bcgColor
+    );
+}
+
 function generateAvatar(
     text,
     foregroundColor = "white",
