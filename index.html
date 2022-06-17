@@ -10,11 +10,17 @@
 <body>
     <div class="container mt-5 bg-light">
         <h2 class="text-center text-info">Generate Avatars with Initials</h2>
-        <div class="align-items-center text-center">
-        <p>Enter name: <input type="text" id="name"></p>
-        <p>Enter background color: <input type="color" id="bcg-color">
-        Enter name: <input type="color" id="text-color"></p>
-        <button id="generate" class="btn btn-outline-success" onclick="generate()">GENERATE</button>
+        <div class="row">
+            <div class="col-md-6 align-items-center text-center">
+            <p>Enter name: <input type="text" id="name"></p>
+            <p>Enter background color: <input type="color" id="bcg-color">
+            Enter name: <input type="color" id="text-color"></p>
+            <button id="generate" class="btn btn-outline-success" onclick="generate()">GENERATE</button>
+            </div>
+            <div id="avatarDiv" class="col-md-6 text-center" style="display:block;">
+                <img alt="Avatar" id="avatar">
+                <a id="download" class="btn btn-info" download="" rel="nofollow">Download</a>
+            </div>
         </div>
     </div>
 </body>
