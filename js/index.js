@@ -1,14 +1,13 @@
 function generate(){
+    // take input values from the user
     var name= document.getElementById("name").value;
     var bcgColor= document.getElementById("bcg-color").value;
     var textColor= document.getElementById("text-color").value;
-    console.log("Background color: "+ bcgColor);
-    console.log(name);
+    // get name initials
     const myNames = name.split(" ");
-    console.log(myNames);
     const initials = myNames.shift().charAt(0) + myNames.pop().charAt(0);
     const nameInitials =initials.toUpperCase();
-    console.log(nameInitials);
+    // show the hidden div
     var avatarDiv = document.getElementById("avatarDiv");
     if (avatarDiv.style.display === "none"){
         avatarDiv.style.display = "block";
